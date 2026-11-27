@@ -3,6 +3,8 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
+const { initStore } = require('./data/store');
+const { getMongoStatus } = require('./config/db');
 
 const supplierRoutes = require('./routes/supplierRoutes');
 const orderRoutes = require('./routes/orderRoutes');
@@ -35,6 +37,7 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
     app: 'JalMitra Water Supply Backend',
+    database: getMongoStatus(),
     timestamp: new Date().toISOString()
   });
 });
@@ -75,12 +78,16 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`===============================================`);
-  console.log(`🌊 JalMitra Backend Server running on port ${PORT}`);
-  console.log(`🚀 Health Check: http://localhost:${PORT}/api/health`);
-  console.log(`💧 Suppliers API: http://localhost:${PORT}/api/suppliers`);
-  console.log(`📦 Orders API:    http://localhost:${PORT}/api/orders`);
-  console.log(`===============================================`);
+initStore().then(() => {
+  app.listen(PORT, () => {
+    const dbStatus = getMongoStatus();
+    console.log(`===============================================`);
+    console.log(`🌊 JalMitra Backend Server running on port ${PORT}`);
+    console.log(`🗄️  MongoDB Atlas: ${dbStatus.connected ? `Connected (${dbStatus.host})` : 'Fallback (db.json) — set MONGO_URI in .env'}`);
+    console.log(`🚀 Health Check: http://localhost:${PORT}/api/health`);
+    console.log(`💧 Suppliers API: http://localhost:${PORT}/api/suppliers`);
+    console.log(`📦 Orders API:    http://localhost:${PORT}/api/orders`);
+    console.log(`===============================================`);
+  });
 });
 

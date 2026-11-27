@@ -1,28 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { readDb, writeDb } = require('../data/store');
+const notificationController = require('../controllers/notificationController');
 
-// GET all notifications
-router.get('/', (req, res) => {
-  const db = readDb();
-  res.json({
-    success: true,
-    data: db.notifications || []
-  });
-});
-
-// Mark all as read
-router.patch('/mark-all-read', (req, res) => {
-  const db = readDb();
-  if (db.notifications) {
-    db.notifications.forEach(n => { n.isRead = true; });
-    writeDb(db);
-  }
-  res.json({
-    success: true,
-    message: 'All notifications marked as read'
-  });
-});
+router.get('/', notificationController.getNotifications);
+router.patch('/mark-all-read', notificationController.markAllRead);
 
 module.exports = router;
-

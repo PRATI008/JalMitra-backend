@@ -1,6 +1,66 @@
 {
   "suppliers": [
     {
+      "id": 15,
+      "name": "Ganga Mineral Water",
+      "business": "Ganga RO Water Plant",
+      "tagline": "Ganga RO Water Plant",
+      "location": "Hazratganj, Lucknow",
+      "fullAddress": "Hazratganj, Lucknow",
+      "phone": "+91 97766 55443",
+      "email": "gangamineralwater@jalmitra.com",
+      "water": "Both",
+      "price": 30,
+      "coldPrice": 35,
+      "normalPrice": 30,
+      "rating": 4.8,
+      "ratingCount": 1,
+      "isVerified": true,
+      "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=500&auto=format&fit=crop&q=60",
+      "status": "Approved",
+      "date": "27 Nov 2026"
+    },
+    {
+      "id": 14,
+      "name": "Ganga Mineral Water",
+      "business": "Ganga RO Water Plant",
+      "tagline": "Ganga RO Water Plant",
+      "location": "Hazratganj, Lucknow",
+      "fullAddress": "Hazratganj, Lucknow",
+      "phone": "+91 97766 55443",
+      "email": "gangamineralwater@jalmitra.com",
+      "water": "Both",
+      "price": 30,
+      "coldPrice": 35,
+      "normalPrice": 30,
+      "rating": 4.8,
+      "ratingCount": 1,
+      "isVerified": true,
+      "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=500&auto=format&fit=crop&q=60",
+      "status": "Approved",
+      "date": "27 Nov 2026"
+    },
+    {
+      "id": 13,
+      "name": "Ganga Mineral Water",
+      "business": "Ganga RO Water Plant",
+      "tagline": "Ganga RO Water Plant",
+      "location": "Hazratganj, Lucknow",
+      "fullAddress": "Hazratganj, Lucknow",
+      "phone": "+91 97766 55443",
+      "email": "gangamineralwater@jalmitra.com",
+      "water": "Both",
+      "price": 30,
+      "coldPrice": 35,
+      "normalPrice": 30,
+      "rating": 4.8,
+      "ratingCount": 1,
+      "isVerified": true,
+      "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=500&auto=format&fit=crop&q=60",
+      "status": "Approved",
+      "date": "27 Nov 2026"
+    },
+    {
       "id": 12,
       "name": "Ganga Mineral Water",
       "business": "Ganga RO Water Plant",
@@ -288,9 +348,181 @@
         "TDS Safe",
         "Sanitized Cans"
       ]
+    },
+    {
+      "id": 4,
+      "name": "jeevan water tanker",
+      "tagline": "Fresh Pure Water Doorstep Delivery",
+      "location": "Amethi",
+      "fullAddress": "aliganj",
+      "distance": "1.0 km",
+      "deliveryTime": "20-30 mins",
+      "water": "Normal",
+      "price": 30,
+      "coldPrice": 35,
+      "normalPrice": 30,
+      "rating": 5,
+      "ratingCount": 1,
+      "isVerified": true,
+      "phone": "9129937416",
+      "openTime": "06:00 AM - 10:00 PM",
+      "features": [
+        "Doorstep Delivery",
+        "TDS Safe",
+        "Sanitized Cans"
+      ]
     }
   ],
   "orders": [
+    {
+      "orderId": "JM84508904",
+      "supplier": {
+        "id": 1,
+        "name": "Mishra Water Supply",
+        "location": "Aliganj, Lucknow",
+        "phone": "+91 98765 43210"
+      },
+      "waterType": "Cold",
+      "quantity": 2,
+      "pricePerUnit": 35,
+      "deliveryCharge": 0,
+      "discount": 0,
+      "totalPrice": 70,
+      "userDetails": {
+        "name": "Test Customer",
+        "mobile": "9988776655",
+        "address": "Flat 101, Gomti Nagar",
+        "location": "Gomti Nagar"
+      },
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "deliveryType": "now",
+      "bookingDate": null,
+      "bookingTime": null,
+      "status": "Delivered",
+      "statusHistory": [
+        {
+          "status": "Placed",
+          "time": "06:31 pm",
+          "note": "Order placed successfully"
+        },
+        {
+          "status": "Out for Delivery",
+          "time": "06:31 pm",
+          "note": "Driver assigned"
+        },
+        {
+          "status": "Delivered",
+          "time": "06:31 pm",
+          "note": "Admin updated order to Delivered"
+        }
+      ],
+      "deliveryPartner": {
+        "name": "Ramesh Yadav",
+        "phone": "+91 98765 88990",
+        "vehicle": "UP 32 DH 6102 (Cargo Loader)"
+      },
+      "orderDate": "27/11/2026",
+      "orderTime": "06:31 pm",
+      "updatedAt": "2026-11-27T13:01:48.953Z",
+      "note": "Driver assigned"
+    },
+    {
+      "orderId": "JM84169863",
+      "supplier": {
+        "id": 1,
+        "name": "Mishra Water Supply",
+        "location": "Aliganj, Lucknow",
+        "phone": "+91 98765 43210"
+      },
+      "waterType": "Cold",
+      "quantity": 2,
+      "pricePerUnit": 35,
+      "deliveryCharge": 0,
+      "discount": 0,
+      "totalPrice": 70,
+      "userDetails": {
+        "name": "Test Customer",
+        "mobile": "9988776655",
+        "address": "Flat 101, Gomti Nagar",
+        "location": "Gomti Nagar"
+      },
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "deliveryType": "now",
+      "bookingDate": null,
+      "bookingTime": null,
+      "status": "Delivered",
+      "statusHistory": [
+        {
+          "status": "Placed",
+          "time": "06:26 pm",
+          "note": "Order placed successfully"
+        },
+        {
+          "status": "Out for Delivery",
+          "time": "06:26 pm",
+          "note": "Driver assigned"
+        }
+      ],
+      "deliveryPartner": {
+        "name": "Ramesh Yadav",
+        "phone": "+91 98765 88990",
+        "vehicle": "UP 32 DH 6102 (Cargo Loader)"
+      },
+      "orderDate": "27/11/2026",
+      "orderTime": "06:26 pm",
+      "updatedAt": "2026-11-27T12:56:09.917Z",
+      "note": "Driver assigned"
+    },
+    {
+      "orderId": "JM84156150",
+      "supplier": {
+        "id": 1,
+        "name": "Mishra Water Supply",
+        "location": "Aliganj, Lucknow",
+        "phone": "+91 98765 43210"
+      },
+      "waterType": "Cold",
+      "quantity": 2,
+      "pricePerUnit": 35,
+      "deliveryCharge": 0,
+      "discount": 0,
+      "totalPrice": 70,
+      "userDetails": {
+        "name": "Test Customer",
+        "mobile": "9988776655",
+        "address": "Flat 101, Gomti Nagar",
+        "location": "Gomti Nagar"
+      },
+      "paymentMethod": "cod",
+      "paymentStatus": "Pending",
+      "deliveryType": "now",
+      "bookingDate": null,
+      "bookingTime": null,
+      "status": "Delivered",
+      "statusHistory": [
+        {
+          "status": "Placed",
+          "time": "06:25 pm",
+          "note": "Order placed successfully"
+        },
+        {
+          "status": "Out for Delivery",
+          "time": "06:25 pm",
+          "note": "Driver assigned"
+        }
+      ],
+      "deliveryPartner": {
+        "name": "Ramesh Yadav",
+        "phone": "+91 98765 88990",
+        "vehicle": "UP 32 DH 6102 (Cargo Loader)"
+      },
+      "orderDate": "27/11/2026",
+      "orderTime": "06:25 pm",
+      "updatedAt": "2026-11-27T12:55:56.220Z",
+      "note": "Driver assigned"
+    },
     {
       "orderId": "JM79838296",
       "supplier": {
@@ -1342,6 +1574,54 @@
   ],
   "notifications": [
     {
+      "id": 1795784508953,
+      "title": "Order #JM84508904 Out for Delivery",
+      "message": "Your water delivery status changed to \"Out for Delivery\".",
+      "time": "Just now",
+      "isRead": false,
+      "orderId": "JM84508904"
+    },
+    {
+      "id": 1795784508904,
+      "title": "Order #JM84508904 Placed!",
+      "message": "Your water order with Mishra Water Supply has been received.",
+      "time": "Just now",
+      "isRead": false,
+      "type": "order"
+    },
+    {
+      "id": 1795784169917,
+      "title": "Order #JM84169863 Out for Delivery",
+      "message": "Your water delivery status changed to \"Out for Delivery\".",
+      "time": "Just now",
+      "isRead": false,
+      "orderId": "JM84169863"
+    },
+    {
+      "id": 1795784169863,
+      "title": "Order #JM84169863 Placed!",
+      "message": "Your water order with Mishra Water Supply has been received.",
+      "time": "Just now",
+      "isRead": false,
+      "type": "order"
+    },
+    {
+      "id": 1795784156221,
+      "title": "Order #JM84156150 Out for Delivery",
+      "message": "Your water delivery status changed to \"Out for Delivery\".",
+      "time": "Just now",
+      "isRead": false,
+      "orderId": "JM84156150"
+    },
+    {
+      "id": 1795784156150,
+      "title": "Order #JM84156150 Placed!",
+      "message": "Your water order with Mishra Water Supply has been received.",
+      "time": "Just now",
+      "isRead": false,
+      "type": "order"
+    },
+    {
       "id": 1795679954600,
       "title": "Order #JM79838296 Preparing",
       "message": "Your water delivery status changed to \"Preparing\".",
@@ -1768,6 +2048,39 @@
   ],
   "users": [
     {
+      "id": 13,
+      "name": "Vikram Mehta",
+      "mobile": "+91 98123 45678",
+      "email": "vikrammehta@jalmitra.com",
+      "location": "Indira Nagar, Lucknow",
+      "address": "Sector B, Aliganj, Lucknow",
+      "joined": "27 Nov 2026",
+      "status": "Active",
+      "ordersCount": 0
+    },
+    {
+      "id": 12,
+      "name": "Vikram Mehta",
+      "mobile": "+91 98123 45678",
+      "email": "vikrammehta@jalmitra.com",
+      "location": "Indira Nagar, Lucknow",
+      "address": "Sector B, Aliganj, Lucknow",
+      "joined": "27 Nov 2026",
+      "status": "Active",
+      "ordersCount": 0
+    },
+    {
+      "id": 11,
+      "name": "Vikram Mehta",
+      "mobile": "+91 98123 45678",
+      "email": "vikrammehta@jalmitra.com",
+      "location": "Indira Nagar, Lucknow",
+      "address": "Sector B, Aliganj, Lucknow",
+      "joined": "27 Nov 2026",
+      "status": "Active",
+      "ordersCount": 0
+    },
+    {
       "id": 10,
       "name": "Vikram Mehta",
       "mobile": "+91 98123 45678",
@@ -1887,6 +2200,20 @@
           "id": 1795679838297,
           "title": "Current Delivery",
           "address": "lekhraj market",
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "mobile": "8052625007",
+      "name": "Shriya",
+      "address": "",
+      "location": "Lucknow",
+      "savedAddresses": [
+        {
+          "id": 1795785135988,
+          "title": "Home",
+          "address": "Lucknow",
           "isDefault": true
         }
       ]
@@ -2055,9 +2382,54 @@
       "reviews": 0,
       "image": "/profile-info.png",
       "createdAt": "2026-11-26T07:58:14.742Z"
+    },
+    {
+      "id": 4,
+      "businessName": "jeevan water tanker",
+      "name": "Jeewant",
+      "phone": "9129937416",
+      "waterType": [
+        "Normal"
+      ],
+      "location": "Amethi",
+      "address": "aliganj",
+      "email": "jeewan@gmail.com",
+      "password": "1234",
+      "supplyRange": "5 km",
+      "rating": 5,
+      "reviews": 0,
+      "image": "/profile-info.png",
+      "createdAt": "2026-11-27T13:25:15.499Z"
     }
   ],
   "supplierNotifications": [
+    {
+      "id": 1795784508905,
+      "title": "New Order #JM84508904",
+      "message": "Test Customer ordered 2x 20L Cold Water (Rs.70) - COD",
+      "time": "Just now",
+      "isRead": false,
+      "type": "new_order",
+      "orderId": "JM84508904"
+    },
+    {
+      "id": 1795784169864,
+      "title": "New Order #JM84169863 🔔",
+      "message": "Test Customer ordered 2x 20L Cold Water (₹70) • COD",
+      "time": "Just now",
+      "isRead": false,
+      "type": "new_order",
+      "orderId": "JM84169863"
+    },
+    {
+      "id": 1795784156151,
+      "title": "New Order #JM84156150 🔔",
+      "message": "Test Customer ordered 2x 20L Cold Water (₹70) • COD",
+      "time": "Just now",
+      "isRead": false,
+      "type": "new_order",
+      "orderId": "JM84156150"
+    },
     {
       "id": 1795679838297,
       "title": "New Order #JM79838296 🔔",
@@ -2179,6 +2551,33 @@
       "features": "Daily 5 Cans chilled delivery for offices",
       "status": "Active",
       "createdAt": "2026-11-25"
+    },
+    {
+      "id": 9,
+      "name": "Corporate Office Jar Pack",
+      "price": 2999,
+      "duration": "1 Month",
+      "features": "Daily 5 Cans chilled delivery for offices",
+      "status": "Active",
+      "createdAt": "2026-11-27"
+    },
+    {
+      "id": 10,
+      "name": "Corporate Office Jar Pack",
+      "price": 2999,
+      "duration": "1 Month",
+      "features": "Daily 5 Cans chilled delivery for offices",
+      "status": "Active",
+      "createdAt": "2026-11-27"
+    },
+    {
+      "id": 11,
+      "name": "Corporate Office Jar Pack",
+      "price": 2999,
+      "duration": "1 Month",
+      "features": "Daily 5 Cans chilled delivery for offices",
+      "status": "Active",
+      "createdAt": "2026-11-27"
     }
   ],
   "admins": [

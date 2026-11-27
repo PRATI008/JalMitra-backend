@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const { connectMongo, syncToMongo } = require('../config/db');
 
 const DB_PATH = path.join(__dirname, 'db.json');
+let memoryDb = null;
+let syncQueue = Promise.resolve();
 
 const initialData = {
   suppliers: [
@@ -244,31 +247,53 @@ const initialData = {
   ]
 };
 
-function readDb() {
+function readJsonFile() {
   try {
     if (!fs.existsSync(DB_PATH)) {
       fs.writeFileSync(DB_PATH, JSON.stringify(initialData, null, 2), 'utf-8');
-      return initialData;
+      return JSON.parse(JSON.stringify(initialData));
     }
     const content = fs.readFileSync(DB_PATH, 'utf-8');
     return JSON.parse(content);
   } catch (err) {
     console.error('Error reading db.json:', err);
-    return initialData;
+    return JSON.parse(JSON.stringify(initialData));
   }
+}
+
+async function initStore() {
+  const localData = readJsonFile();
+  const { connected, data } = await connectMongo(localData);
+  if (connected && data) {
+    memoryDb = { ...localData, ...data };
+  } else {
+    memoryDb = localData;
+  }
+  return memoryDb;
+}
+
+function readDb() {
+  if (memoryDb) return memoryDb;
+  memoryDb = readJsonFile();
+  return memoryDb;
 }
 
 function writeDb(data) {
+  memoryDb = data;
   try {
     fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
-    return true;
   } catch (err) {
     console.error('Error writing db.json:', err);
-    return false;
   }
+  // Serialize MongoDB Atlas writes to prevent race conditions
+  syncQueue = syncQueue.then(() => syncToMongo(data)).catch((err) => {
+    console.error('Mongo sync queue error:', err);
+  });
+  return true;
 }
 
 module.exports = {
+  initStore,
   readDb,
   writeDb
 };
